@@ -7,6 +7,8 @@ use App\Models\Orientation;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Departement extends Model implements HasMedia 
@@ -15,12 +17,16 @@ class Departement extends Model implements HasMedia
     use HasFactory;
     protected $fillable=['lib','section_id'];
 
-    public function section(): BelongsTo
-    {
-        return $this->belongsTo(Section::class);
-    }
+
+    
     public function orientations(): HasMany
     {
         return $this->hasMany(Orientation::class);
     }
+    
+    public function section(): BelongsTo
+    {
+        return $this->belongsTo(Section::class);
+    }
+
 }
