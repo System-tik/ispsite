@@ -11,6 +11,7 @@ use Filament\Resources\Resource;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use App\Filament\Resources\ArticleResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
@@ -42,12 +43,20 @@ class ArticleResource extends Resource
                 TextColumn::make('description'),
                 TextColumn::make('auteur'),
                 SpatieMediaLibraryImageColumn::make('Fichier')
+                
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\Action::make('pdf')->url(function(Article $record){
+
+                    //fopen($record->getMedia()[0]['original_url'], "r") or die("impossible");
+                    return $record->getMedia()[0]['original_url'];  
+                }, 'blank'),
+
+                
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
