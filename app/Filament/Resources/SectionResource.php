@@ -28,6 +28,7 @@ class SectionResource extends Resource
         return $form
             ->schema([
                 TextInput::make('lib'),
+                TextInput::make('description'),
                 SpatieMediaLibraryFileUpload::make('images')
             ]);
     }
@@ -37,6 +38,7 @@ class SectionResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('lib'),
+                TextColumn::make('description'),
                 SpatieMediaLibraryImageColumn::make('images')
             ])
             ->filters([

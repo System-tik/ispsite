@@ -42,7 +42,6 @@ class ArticleResource extends Resource
                 TextColumn::make('lib'),
                 TextColumn::make('description'),
                 TextColumn::make('auteur'),
-                SpatieMediaLibraryImageColumn::make('Fichier')
                 
             ])
             ->filters([

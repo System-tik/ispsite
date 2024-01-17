@@ -14,7 +14,7 @@ class Section extends Model implements HasMedia
 {
     use InteractsWithMedia;
     use HasFactory;
-    protected $fillable=['lib'];
+    protected $fillable=['lib','description'];
 
     public function departements(): HasMany
     {

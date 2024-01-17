@@ -11,5 +11,5 @@ class Article extends Model implements HasMedia
 {
     use InteractsWithMedia;
     use HasFactory;
-    protected $fillable=['lib','description','auteur'];
+    protected  $fillable=['lib','description','auteur'];
 }
