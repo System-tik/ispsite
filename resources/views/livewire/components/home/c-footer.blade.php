@@ -1,8 +1,8 @@
 <div>
     {{-- The best athlete wants his opponent at his best. --}}
-    <footer class="bg-gray-900">
-        <div class="container p-6 mx-auto">
-            <div class="lg:flex">
+    <footer class="bg-gray-900 ">
+        <div class="mx-8">
+            <div class="flex mx-16 py-5">
                 <div class="w-full -mx-6 lg:w-2/5">
                     <div class="px-6">
                         <a href="#">
@@ -13,7 +13,7 @@
                             Rejoindre ISP Mbanza - Ngungu c'est rejoindre une communauté d'élite
                         </p>
     
-                        <div class="flex mt-6 -mx-2">
+                        <div class="flex mt-6 mx-2">
                             <a href="#"
                                 class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                                 aria-label="Reddit">
@@ -47,28 +47,28 @@
                     </div>
                 </div>
     
-                <div class="mt-6 lg:mt-0 lg:flex-1">
-                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                        <div>
+                <div class="ml-44">
+                    <div class="flex gap-10 justify-center">
+                        <div class="">
                             <h3 class="text-gray-700 uppercase dark:text-white">REVUES</h3>
+                            @foreach ($article as $articles)  
+                                <a href="{{route('article',['id'=>$articles->id])}}" class="block mt-2 text-sm  text-gray-600 dark:text-gray-400 hover:underline">{{$articles->lib}}</a>
+                            @endforeach
                         </div>
     
-                        <div>
-                            <h3 class="text-gray-700 uppercase dark:text-white">Evenement</h3>
-                            {{-- <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Mega cloud</a>
-                            <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Aperion UI</a>
-                            <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Meraki UI</a> --}}
+                        <div class="">
+                            <h3 class="text-gray-700 uppercase dark:text-white">Evenements</h3>
+                            @foreach ($evenement as $evenements)   
+                                <a href="{{route('evenement',['id'=>$evenements->id])}}" class="block mt-2  text-sm text-gray-600 dark:text-gray-400 hover:underline">{{$evenements->lib}}</a>
+                            @endforeach
                         </div>
-                        
-                        
-                        <div>
+                        <div class="">
                             <h3 class="text-gray-700 uppercase dark:text-white">Contact</h3>
                             @foreach ($contact as $contacts)
                             <span class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">{{$contacts->lib}}</span>
                             <span class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">{{$contacts->contenu}}</span>
                             @endforeach
                         </div>
-
                     </div>
                 </div>
             </div>

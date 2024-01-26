@@ -28,10 +28,11 @@ class ArticleResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('lib'),
-                TextInput::make('description'),
-                TextInput::make('auteur'),
-                SpatieMediaLibraryFileUpload::make('Fichier')
+                TextInput::make('lib')->required(),
+                TextInput::make('description')->required(),
+                TextInput::make('auteur')->required(),
+                SpatieMediaLibraryFileUpload::make('images')->required()->multiple(),
+                //SpatieMediaLibraryFileUpload::make('Fichier')->required()
             ]);
     }
 
@@ -42,6 +43,7 @@ class ArticleResource extends Resource
                 TextColumn::make('lib'),
                 TextColumn::make('description'),
                 TextColumn::make('auteur'),
+                SpatieMediaLibraryImageColumn::make('images')
                 
             ])
             ->filters([
@@ -50,7 +52,6 @@ class ArticleResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\Action::make('pdf')->url(function(Article $record){
-
                     //fopen($record->getMedia()[0]['original_url'], "r") or die("impossible");
                     return $record->getMedia()[0]['original_url'];  
                 }, 'blank'),

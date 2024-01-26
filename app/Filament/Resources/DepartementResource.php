@@ -12,6 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\DepartementResource\Pages;
@@ -29,10 +30,11 @@ class DepartementResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('lib'),
+                TextInput::make('lib')->required(),
+                RichEditor::make('description')->required(),
                 Select::make('section_id')
                     ->relationship('Section','lib')->required(),
-                SpatieMediaLibraryFileUpload::make('images')
+                SpatieMediaLibraryFileUpload::make('images')->required()
             ]);
     }
 
@@ -41,6 +43,7 @@ class DepartementResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('lib'),
+                TextColumn::make('description'),
                 SpatieMediaLibraryImageColumn::make('images')
             ])
             ->filters([

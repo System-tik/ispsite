@@ -27,9 +27,9 @@ class HeaderResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('lib'),
-                TextInput::make('description'),
-                SpatieMediaLibraryFileUpload::make('images')
+                TextInput::make('lib')->required(),
+                TextInput::make('description')->required(),
+                SpatieMediaLibraryFileUpload::make('images')->required()
             ]);
     }
 

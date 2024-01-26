@@ -1,11 +1,11 @@
-  
-<section id="header-slide" class="splide" aria-label="Splide Basic HTML Example">
+<div> 
+  <section id="header-slide" class="splide" aria-label="Splide Basic HTML Example">
     <header class="fixed inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-between px-6 py-1 lg:px-8" aria-label="Global">
-        <div class="flex lg:flex-1">
-          <a href="#" class="-m-1.5 p-1.5">
+        <div class="flex  lg:flex-1">
+          <a href="{{route('home')}}" class="-m-1.5 p-1.5">
             <span class="sr-only">ISP Mbanza-Ngungu</span>
-            <img class="h-10 w-auto" src="{{asset('assets/logo.png')}}" alt="">
+            <img class="h-10 mx-14 w-auto" src="{{asset('assets/logo.png')}}" alt="">
           </a>
         </div>
         <div class="flex lg:hidden">
@@ -17,14 +17,17 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Accueil</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Evenements</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Services</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Revues</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
+
+          <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Accueil</a>
+          <a href="{{route('about')}}" class="text-sm font-semibold leading-6 text-gray-900">Présentation</a>
+          <a href="{{route('sections')}}" class="text-sm font-semibold leading-6 text-gray-900">Section</a>
+          <a href="{{route('evenements')}}" class="text-sm font-semibold leading-6 text-gray-900">Evenement</a>
+          <a href="{{route('articles')}}" class="text-sm font-semibold leading-6 text-gray-900">Articles</a>
+          <a href="{{route('contact')}}" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
         </div>
+      
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+          {{-- <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a> --}}
         </div>
       </nav>
       <!-- Mobile menu, show/hide based on menu open state. -->
@@ -57,7 +60,8 @@
     <div class="splide__track">
           <ul class="splide__list">
               <li class="splide__slide">
-                  <div  style="background-image: url({{asset('assets/i.jpg')}})">
+                @foreach ($headers as $header)
+                  <div  style="background-image: url({{$header->getMedia()[0]['original_url']}})" class="">
                       {{-- In work, do what you enjoy. --}}
                       <div class="" style="background-color: rgba(0, 0, 0, .7)">
                         
@@ -68,8 +72,8 @@
                             <div class="mx-auto max-w-2xl py-20">
                              {{-- Titre --}}
                               <div class="text-center">
-                                <h1 class="text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl animate__animated animate__bounceInDown">BIENVENUE SUR LE PORTAIL DE L'ISP DE MBANZA-NGUNGU</h1>
-                                <p class="mt-6 text-lg leading-8 text-gray-200 animate__animated  animate__bounceIn">Le meileur cadre pour votre apprentissage Univertitaire</p>
+                                <h1 data-aos="zoom-in" class="text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl animate__animated animate__bounceInDown">{{$header->lib}}</h1>
+                                <p class="mt-6 text-lg leading-8 text-gray-200 animate__animated  animate__bounceIn">{{$header->description}}</p>
                               </div>
                             </div>
                             <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
@@ -80,6 +84,7 @@
                         
                         
                   </div>
+                @endforeach
               </li>
           </ul>
     </div>
@@ -89,4 +94,4 @@
         }).mount();
     </script>
   </section>
-
+</div>

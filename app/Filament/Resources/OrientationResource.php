@@ -27,11 +27,11 @@ class OrientationResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('lib'),
-                TextInput::make('description'),
+                TextInput::make('lib')->required(),
+                TextInput::make('description')->required(),
                 Select::make('departement_id')
                 ->relationship('Departement','lib')->required(),
-                SpatieMediaLibraryFileUpload::make('images')
+                SpatieMediaLibraryFileUpload::make('images')->required()->multiple()
             ]);
     }
 

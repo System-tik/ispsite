@@ -15,7 +15,7 @@ class Departement extends Model implements HasMedia
 {
     use InteractsWithMedia;
     use HasFactory;
-    protected $fillable=['lib','section_id'];
+    protected $fillable=['lib','description','section_id'];
 
 
     

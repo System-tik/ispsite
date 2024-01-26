@@ -37,9 +37,9 @@ class PourquoiResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('titre'),
-                TextColumn::make('description'),
-                SpatieMediaLibraryImageColumn::make('images')
+                TextColumn::make('titre')->required(),
+                TextColumn::make('description')->required(),
+                SpatieMediaLibraryImageColumn::make('images')->required()
             ])
             ->filters([
                 //

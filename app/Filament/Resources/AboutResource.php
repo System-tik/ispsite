@@ -8,8 +8,10 @@ use App\Models\About;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\AboutResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -27,9 +29,9 @@ class AboutResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('titre'),
-                TextInput::make('description'),
-                SpatieMediaLibraryFileUpload::make('images')
+                TextInput::make('titre')->required(),
+                RichEditor::make('description')->required(),
+                SpatieMediaLibraryFileUpload::make('images')->required()
             ]);
     }
 
@@ -46,6 +48,12 @@ class AboutResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                // Action::make('dupliquer')
+                //     ->action(function(About $record){
+                //         dd($record->titre);
+                //     })
+                Tables\Actions\ReplicateAction::make()
+                
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

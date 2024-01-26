@@ -10,6 +10,7 @@ use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ActualiteResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -27,9 +28,9 @@ class ActualiteResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('lib'),
-                TextInput::make('description'),
-                SpatieMediaLibraryFileUpload::make('couverture')
+                TextInput::make('lib')->required(),
+                RichEditor::make('description')->required(),
+                SpatieMediaLibraryFileUpload::make('couverture')->required()
             ]);
     }
 
