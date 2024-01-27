@@ -27,9 +27,9 @@ class PourquoiResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('titre'),
-                TextInput::make('description'),
-                SpatieMediaLibraryFileUpload::make('images')
+                TextInput::make('titre')->required(),
+                TextInput::make('description')->required(),
+                SpatieMediaLibraryFileUpload::make('images')->required()
             ]);
     }
 
@@ -37,9 +37,9 @@ class PourquoiResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('titre')->required(),
-                TextColumn::make('description')->required(),
-                SpatieMediaLibraryImageColumn::make('images')->required()
+                TextColumn::make('titre'),
+                TextColumn::make('description'),
+                SpatieMediaLibraryImageColumn::make('images')
             ])
             ->filters([
                 //

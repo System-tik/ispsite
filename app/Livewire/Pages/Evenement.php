@@ -9,7 +9,7 @@ use App\Models\Actualite;
 class Evenement extends Component
 {
     public $evenement;
-    #[Layout('welcome')]
+    #[Layout('components.layouts.app')]
     public function render()
     {
         $this->evenement=Actualite::all();

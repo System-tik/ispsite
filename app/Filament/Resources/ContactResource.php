@@ -14,6 +14,10 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ContactResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ContactResource\RelationManagers;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Toggle;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ToggleColumn;
 
 class ContactResource extends Resource
 {
@@ -27,7 +31,8 @@ class ContactResource extends Resource
             ->schema([
                 TextInput::make('lib')->required(),
                 TextInput::make('contenu')->required(),
-                TextInput::make('reseau')->required(),
+                Toggle::make('reseau')->required()->default(false),
+                TextInput::make('icon'),
             ]);
     }
 
@@ -37,7 +42,8 @@ class ContactResource extends Resource
             ->columns([
                 TextColumn::make('lib'),
                 TextColumn::make('contenu'),
-                TextColumn::make('reseau'),
+                ToggleColumn::make('reseau'),
+                TextColumn::make('icon'),
             ])
             ->filters([
                 //

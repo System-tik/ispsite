@@ -27,9 +27,9 @@ class SectionResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('lib'),
-                TextInput::make('description'),
-                SpatieMediaLibraryFileUpload::make('images')
+                TextInput::make('lib')->required(),
+                TextInput::make('description')->required(),
+                SpatieMediaLibraryFileUpload::make('images')->required()
             ]);
     }
 
@@ -37,9 +37,9 @@ class SectionResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('lib')->required(),
-                TextColumn::make('description')->required(),
-                SpatieMediaLibraryImageColumn::make('images')->required()
+                TextColumn::make('lib'),
+                TextColumn::make('description'),
+                SpatieMediaLibraryImageColumn::make('images')
             ])
             ->filters([
                 //

@@ -30,7 +30,7 @@ class ActualiteResource extends Resource
             ->schema([
                 TextInput::make('lib')->required(),
                 RichEditor::make('description')->required(),
-                SpatieMediaLibraryFileUpload::make('couverture')->required()
+                SpatieMediaLibraryFileUpload::make('couverture')->required()->multiple()
             ]);
     }
 

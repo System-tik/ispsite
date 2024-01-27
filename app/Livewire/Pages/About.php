@@ -10,7 +10,7 @@ class About extends Component
 {
     public $apropos;
 
-    #[Layout('welcome')]
+    #[Layout('components.layouts.app')]
     public function render()
     {
         $this->apropos=Apropos::all();

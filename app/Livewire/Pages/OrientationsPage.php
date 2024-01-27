@@ -8,7 +8,7 @@ use Livewire\Attributes\Layout;
 
 class OrientationsPage extends Component
 {
-    #[Layout('welcome')]
+    #[Layout('components.layouts.app')]
     public $sections;
     public $orientations;
     public function render()

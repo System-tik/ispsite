@@ -1,8 +1,8 @@
 <div>
     {{-- The best athlete wants his opponent at his best. --}}
-    <footer class="bg-gray-900 ">
-        <div class="mx-8">
-            <div class="flex mx-16 py-5">
+    <footer class="bg-gray-900">
+        <div class="lg:mx-8 px-5">
+            <div class="lg:flex lg:mx-16 py-5">
                 <div class="w-full -mx-6 lg:w-2/5">
                     <div class="px-6">
                         <a href="#">
@@ -13,9 +13,9 @@
                             Rejoindre ISP Mbanza - Ngungu c'est rejoindre une communauté d'élite
                         </p>
     
-                        <div class="flex mt-6 mx-2">
+                        <div class="flex my-5">
                             <a href="#"
-                                class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                                class="lg:mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                                 aria-label="Reddit">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -25,7 +25,7 @@
                             </a>
                         
                             <a href="#"
-                                class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                                class="lg:mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                                 aria-label="Facebook">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -35,7 +35,7 @@
                             </a>
                         
                             <a href="#"
-                                class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                                class="lg:mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                                 aria-label="Github">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -47,8 +47,8 @@
                     </div>
                 </div>
     
-                <div class="ml-44">
-                    <div class="flex gap-10 justify-center">
+                <div class="lg:ml-44">
+                    <div class="lg:flex lg:gap-10 justify-center">
                         <div class="">
                             <h3 class="text-gray-700 uppercase dark:text-white">REVUES</h3>
                             @foreach ($article as $articles)  
@@ -65,8 +65,14 @@
                         <div class="">
                             <h3 class="text-gray-700 uppercase dark:text-white">Contact</h3>
                             @foreach ($contact as $contacts)
-                            <span class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">{{$contacts->lib}}</span>
-                            <span class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">{{$contacts->contenu}}</span>
+                            <div class="flex gap-4">
+                                <span class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">{{$contacts->lib}} : </span>
+                                @if ($contacts->lib == 'Tel')   
+                                <a href="tel:{{$contacts->contenu}}" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">{{$contacts->contenu}}</a>
+                                @else
+                                <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">{{$contacts->contenu}}</a>
+                                @endif
+                            </div>
                             @endforeach
                         </div>
                     </div>

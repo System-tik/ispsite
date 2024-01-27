@@ -9,7 +9,7 @@ use Livewire\Attributes\Layout;
 class Section extends Component
 {
     public $sections;
-    #[Layout('welcome')]
+
     public function render()
     {
         $this->sections=ModelsSection::all();

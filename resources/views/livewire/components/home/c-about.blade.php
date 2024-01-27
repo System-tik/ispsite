@@ -3,7 +3,7 @@
     {{-- The best athlete wants his opponent at his best. --}}
     <section class="bg-white ">
  
-        <div class=" py-10  px-32">
+        <div class=" py-10  lg:px-32 px-5">
             <div class="lg:flex lg:items-center">
                 <div class="w-full space-y-12 lg:w-1/2 ">
 

@@ -32,7 +32,6 @@ class ArticleResource extends Resource
                 TextInput::make('description')->required(),
                 TextInput::make('auteur')->required(),
                 SpatieMediaLibraryFileUpload::make('images')->required()->multiple(),
-                //SpatieMediaLibraryFileUpload::make('Fichier')->required()
             ]);
     }
 

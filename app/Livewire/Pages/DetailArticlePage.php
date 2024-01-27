@@ -11,7 +11,7 @@ class DetailArticlePage extends Component
 {
     public $article;
 
-    #[Layout('welcome')]
+    #[Layout('components.layouts.app')]
     public function render()
     {
         return view('livewire.pages.detail-article-page');

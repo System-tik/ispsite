@@ -9,7 +9,7 @@ use Livewire\Attributes\Layout;
 
 class DetailSection extends Component
 {
-    #[Layout('welcome')]
+    #[Layout('components.layouts.app')]
     public $sections;
     public $departement;
     public function render()

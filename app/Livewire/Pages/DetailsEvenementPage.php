@@ -9,7 +9,7 @@ use Livewire\Attributes\Layout;
 
 class DetailsEvenementPage extends Component
 {
-    #[Layout('welcome')]
+    #[Layout('components.layouts.app')]
     public $evenement;
     public function render()
     {
