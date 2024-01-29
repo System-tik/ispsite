@@ -35,7 +35,6 @@
                             </div>
                         </div>
                     @endforeach
-                    <a href="{{route('about')}}" class="bg-blue-500 text-white p-2 rounded-lg">Voir Plus</a>
                     
  
                 </div>

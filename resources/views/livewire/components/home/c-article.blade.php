@@ -17,7 +17,7 @@
                 </div>
                 <div class="mt-2">
                     <a href="{{route('article',['id'=>$article->id])}}" class="text-xl font-bold text-gray-700  hover:text-gray-600 dark:hover:text-gray-200 hover:underline" tabindex="0" role="link">{{$article->lib}}</a>
-                   <a href="{{route('article',['id'=>$article->id])}}"><p class="mt-2 text-gray-600 dark:text-gray-300 text-justify">{{$article->description}}</p></a> 
+                   <a href="{{route('article',['id'=>$article->id])}}"><p class="mt-2 text-gray-600 dark:text-gray-300 text-justify">{{substr($article->description,0,99)}}...</p></a> 
                 </div>
             
                 <div class="flex items-center justify-between mt-4">

@@ -5,9 +5,9 @@
     </h1>
 
     <p class="mt-4 text-center text-gray-400">
-        Bienvenue sur la page Actualités de l'ISP. Restez connecté avec l'excitant battement
+        Restez connecté avec l'excitant battement
         de cœur de notre communauté universitaire
-        grâce à nos mises à jour régulières et informatives.
+        grâce à nos actualités.
     </p>
     <section id="events" class="splide pt-10" aria-label="Splide Basic HTML Example">
         <div class="splide__track">
