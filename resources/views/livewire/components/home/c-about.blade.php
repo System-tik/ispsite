@@ -40,7 +40,7 @@
                 </div>
     
                 <div class="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
-                    <img data-aos="zoom-in" class=" object-cover rounded-full w-full" src="{{asset('assets/i.jpg')}}" alt="">
+                    <img data-aos="zoom-in" class=" object-cover rounded-full w-full" src="{{asset('assets/about2.jpeg')}}" alt="">
                 </div>
             </div>
 
