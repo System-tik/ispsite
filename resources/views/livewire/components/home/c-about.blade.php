@@ -23,15 +23,19 @@
                                 </svg>
                             </span>
         
-                            <div class="mt-4 md:mx-4 md:mt-0">
+                            <div class="my-4 md:mx-4 md:mt-0">
                                 <h1 class="text-xl font-semibold text-gray-700 capitalize ">{{$apropo->titre}}</h1>
         
-                                <p class="mt-3 text-gray-500 dark:text-gray-300">
-                                    {{$apropo->description }}
-                                </p>
+                                <div class="mt-3 text-gray-400 text-justify">
+                                    @php
+                                        echo '<span>'. substr($apropo->description,0,300) .'...</span>'
+                                        
+                                    @endphp
+                                </div>
                             </div>
                         </div>
                     @endforeach
+                    <a href="{{route('about')}}" class="bg-blue-500 text-white p-2 rounded-lg">Voir Plus</a>
                     
  
                 </div>

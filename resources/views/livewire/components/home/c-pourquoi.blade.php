@@ -20,10 +20,10 @@
                                         <img class=" md:mx-6 rounded-full object-cover shadow-md  md:w-80 lg:h-[26rem] md:h-[32rem] md:rounded-2xl" src="{{$pourquois->getMedia()[0]['original_url']}}" alt="client photo" />
                                         <div class="mt-2 md:mx-6">
                                             <div>
-                                                <p class="mt-4 text-xl font-medium tracking-tight text-white">{{$pourquois->titre}}</p>
+                                                <p class="mt-4 text-xl font-medium tracking-tight text-white text-bold">{{$pourquois->titre}}</p>
                                             </div>
                         
-                                            <p class="mt-4 text-white lg:text-xl"> {{$pourquois->description}}</p>
+                                            <p class="mt-4 text-white lg:text-xl text-justify"> {{$pourquois->description}}</p>
                                             
                                             {{-- <div class="flex items-center justify-between mt-6 md:justify-start">
                                                 <button title="left arrow" class="p-2 text-white transition-colors duration-300 border rounded-full rtl:-scale-x-100 hover:bg-blue-400">

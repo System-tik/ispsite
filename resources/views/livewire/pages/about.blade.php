@@ -16,9 +16,9 @@
     </div>
     <section class="bg-gray-100 flex flex-col gap-20 w-full h-full lg:py-12 lg:flex lg:justify-center">
         @foreach ($apropos as $apropo)    
-            <div class="overflow-hidden py-2 bg-white lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
-                <div>
-                    <img class="h-64 ml-5 w-96" src="{{$apropo->getMedia()[0]['original_url']}}" alt="">
+            <div class="overflow-hidden py-2 bg-white lg:mx-8 lg:flex lg:items-center lg:w-full lg:shadow-md lg:rounded-xl">
+                <div class="h-full">
+                    <img class="h-full ml-5 w-96" src="{{$apropo->getMedia()[0]['original_url']}}" alt="">
                 </div>
         
                 <div class="max-w-xl px-6 lg:py-12 lg:max-w-5xl lg:w-1/2">
@@ -26,9 +26,11 @@
                         {{$apropo->titre}} 
                     </h2>
         
-                    <p class="mt-4 text-gray-500 ">
-                        {{$apropo->description}}    
-                    </p>
+                    <div class="mt-4 text-gray-500 text-justify ">
+                        @php
+                            echo "<span>$apropo->description</span>" 
+                        @endphp
+                    </div>
                     <div class="inline-flex w-full mt-6 sm:w-auto">
               
                     </div>

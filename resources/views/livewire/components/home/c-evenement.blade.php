@@ -4,8 +4,10 @@
         Actualités de l'Institut
     </h1>
 
-    <p class="mt-4 text-center text-gray-500 dark:text-gray-300">
-        suivre nos activités
+    <p class="mt-4 text-center text-gray-400">
+        Bienvenue sur la page Actualités de l'ISP. Restez connecté avec l'excitant battement
+        de cœur de notre communauté universitaire
+        grâce à nos mises à jour régulières et informatives.
     </p>
     <section id="events" class="splide pt-10" aria-label="Splide Basic HTML Example">
         <div class="splide__track">
@@ -19,7 +21,7 @@
                             <h1 class="lg:text-2xl">{{$evenements->lib}}</h1>
                             <p>
                                 @php
-                                    echo $evenements->description;
+                                    echo  '<span>'. substr($evenements->description,0,99) .'...</span>'
                                 @endphp 
                             </p>
                             <a href="{{route('evenement',['id'=>$evenements->id])}}" class="text-yellow-600 font-bold">Lire plus...</a>

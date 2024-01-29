@@ -17,7 +17,7 @@
               style="background-color: rgba(0, 0, 0, 0.75)">
               <div class="flex h-full items-center justify-center">
                 <div class="px-6 text-center text-white md:px-12 lg:px-64">
-                  <h1 class="mb-6 md:text-4xl  font-bold animate__animated animate__bounceInDown">{{$header->lib}}</h1>
+                  <h1 class="mb-6 md:text-4xl  font-bold animate__animated animate__bounceInDown uppercase">{{$header->lib}}</h1>
                   <h3 class="mb-8 md:text-2xl tet-sm font-bold animate__animated  animate__bounceIn">{{$header->description}}</h3>
                   {{-- <button
                     type="button"

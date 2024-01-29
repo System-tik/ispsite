@@ -7,8 +7,9 @@
                 Sections organisées
             </h1>
             
-            <p class="mt-4 text-gray-500 dark:text-gray-300">
-                Lorem ipsum dolor hjhjh sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus hhhhhh jkjkkj 
+            <p class="mt-4 text-gray-500 dark:text-gray-300 text-justify">
+                Bienvenue dans le monde captivant de l'apprentissage individualisé au sein de l'isp.Nous croyons en l'importance de créer des expériences éducatives riches et interactives pour nos étudiants. C'est pourquoi nous avons mis 
+                en place un système de sections dynamiques, offrant un complément essentiel à nos cours magistraux.
             </p>
             <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
                     @foreach ($sections as $section)     

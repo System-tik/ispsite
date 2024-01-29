@@ -6,7 +6,7 @@
     </h1>
 
     <p class="mt-4 text-gray-500 dark:text-gray-300">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
+        Bienvenue sur la plateforme des Articles Scientifiques de l'ISP. Notre engagement envers l'excellence académique se reflète dans la section dédiée aux articles scientifiques, où la recherche novatrice et les contributions intellectuelles de notre corps professoral et de nos étudiants sont mises en avant
     </p>
     <div class="grid lg:grid-cols-3 gap-5 pt-10">
         @foreach ($articles as $article)
