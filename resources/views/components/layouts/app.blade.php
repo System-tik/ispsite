@@ -6,8 +6,9 @@
 
         <title>{{env('APP_NAME')}}</title>
 
-        @vite('resources/css/app.css')
-        @vite('resources/js/app.js')
+        {{-- @vite('resources/css/app.css')
+        @vite('resources/js/app.js') --}}
+        <link rel="stylesheet" href="{{asset('build/assets/app-KrXkx2Pf.css')}}">
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -19,6 +20,7 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         {{-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
         {{-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
+        <script src="{{asset('build/assets/app-ecWDpuvf.js')}}"></script>
     </head>
     <body >
     
