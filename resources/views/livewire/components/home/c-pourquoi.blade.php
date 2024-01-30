@@ -17,7 +17,7 @@
                                 @foreach ($pourquoi as $pourquois)  
                                 <li class="splide__slide w-full">         
                                     <div class="w-full p-6 bg-bleu-600 md:flex md:items-center rounded-2xl md:bg-transparent md:p-0 lg:px-12 md:justify-evenly">
-                                        <img class=" md:mx-6 rounded-full object-cover shadow-md  md:w-80 lg:h-[26rem] md:h-[32rem] md:rounded-2xl" src="{{$pourquois->getMedia()[0]['original_url']}}" alt="client photo" />
+                                        <img class=" md:mx-6 object-cover shadow-md  md:w-80 lg:h-[26rem] md:h-[32rem] md:rounded-2xl" src="{{$pourquois->getMedia()[0]['original_url']}}" alt="client photo" />
                                         <div class="mt-2 md:mx-6">
                                             <div>
                                                 <p class="mt-4 text-xl font-medium tracking-tight text-white text-bold">{{$pourquois->titre}}</p>
