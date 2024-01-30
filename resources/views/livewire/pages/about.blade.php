@@ -5,7 +5,7 @@
 
             <livewire:components.home.c-nav>
             <div class="lg:px-16 lg:py-6 px-5">
-                <h1 class="md:text-2xl text-xl font-semibold text-white capitalize lg:text-3xl ">Présentation isp Mbanzu-Ngungu</h1>
+                <h1 class="md:text-2xl text-xl font-semibold text-white capitalize lg:text-3xl ">Présentation ISP Mbanzu-Ngungu</h1>
                 <div class="mt-2">
                     <span class="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
                     <span class="inline-block w-3 h-1 ml-1 bg-blue-500 rounded-full"></span>

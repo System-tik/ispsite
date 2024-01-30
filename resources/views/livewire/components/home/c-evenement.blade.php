@@ -9,7 +9,7 @@
         de cœur de notre communauté universitaire
         grâce à nos actualités.
     </p>
-    <section id="events" class="splide pt-10" aria-label="Splide Basic HTML Example">
+    <section id="events" class="splide pt-10" aria-label="Splide Basic HTML Example" data-aos="zoom-in">
         <div class="splide__track">
             <ul class="splide__list">
                 @foreach ($evenement as $evenements)

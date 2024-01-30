@@ -9,7 +9,7 @@
                     Pourquoi nous choisir
                 </h1>
         
-                <main class="relative z-20 w-full mt-8  md:flex md:items-center xl:mt-12">
+                <main class="relative z-20 w-full mt-8  md:flex md:items-center xl:mt-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <div class="absolute lg:w-96 bg-blue-600 -z-10 h-64 md:h-96 rounded-2xl"></div>
                     <section class="splide"  id="why">
                         <div class="splide__track">
