@@ -11,7 +11,7 @@ class CAbout extends Component
 
     public function render()
     {
-        $this->apropos=About::all()->limit(2);
+        $this->apropos=About::limit(2)->get();
         return view('livewire.components.home.c-about');
     }
 }
