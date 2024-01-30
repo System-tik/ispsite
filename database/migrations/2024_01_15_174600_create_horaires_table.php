@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->date('debut');
             $table->date('fin');
-            $table->foreignId('section_id')->constrained();
+            $table->foreignId('section_id');
             $table->timestamps();
         });
     }

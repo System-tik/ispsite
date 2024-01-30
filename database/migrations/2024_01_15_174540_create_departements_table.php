@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('lib');
             $table->text('description');
-            $table->foreignId('section_id')->constrained();
+            $table->foreignId('section_id');
             $table->timestamps();
         });
     }
