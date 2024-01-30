@@ -8,7 +8,7 @@
 
         {{-- @vite('resources/css/app.css')
         @vite('resources/js/app.js') --}}
-        <link rel="stylesheet" href="{{asset('build/assets/app-KrXkx2Pf.css')}}">
+        <link rel="stylesheet" href="{{asset('build/assets/app-vIuBbNkK.css')}}">
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"

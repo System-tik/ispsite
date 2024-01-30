@@ -2,19 +2,58 @@
 <div  id="presentation">
     {{-- The best athlete wants his opponent at his best. --}}
     <section class="bg-white ">
- 
-        <div class=" py-10  lg:px-32 px-5">
-            <div class="lg:flex lg:items-center">
-                <div class="w-full space-y-12 lg:w-1/2 ">
+        <style>
+            .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+            }
 
-                    <div>
-                        <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">Présentation <p> isp Mbanzu-Ngungu</h1>
-                        <div class="mt-2">
-                            <span class="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
-                            <span class="inline-block w-3 h-1 ml-1 bg-blue-500 rounded-full"></span>
-                            <span class="inline-block w-1 h-1 ml-1 bg-blue-500 rounded-full"></span>
-                        </div>
-                    </div>
+            /* Create four equal columns that sits next to each other */
+            .column {
+            flex: 25%;
+            padding: 0 4px;
+            }
+
+            .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+            padding: 5px;
+            background-color: rgba(192, 192, 192, 0.363);
+            border-radius: 10px;
+            }
+
+            /* Responsive layout - makes a two column-layout instead of four columns */
+            @media screen and (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+            }
+
+            /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+            @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+            }
+
+        </style>
+        <div class=" py-10  lg:px-32 px-5">
+            <div class="pb-10 w-full">
+                <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">Présentation <p> isp Mbanzu-Ngungu</h1>
+                <div class="mt-2">
+                    <span class="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+                    <span class="inline-block w-3 h-1 ml-1 bg-blue-500 rounded-full"></span>
+                    <span class="inline-block w-1 h-1 ml-1 bg-blue-500 rounded-full"></span>
+                </div>
+            </div>
+            <div class="lg:grid lg:grid-cols-2 gap-10">
+                <div class="w-full space-y-12 ">
+
                     @foreach ($apropos as $apropo)
                         <div class="md:flex md:items-start md:-mx-4" data-aos="fade-up">
                             <span class="inline-block p-0 text-blue-500 bg-blue-100 rounded-xl md:mx-4  dark:bg-blue-500">
@@ -23,7 +62,7 @@
                                 </svg>
                             </span>
         
-                            <div class="my-4 md:mx-4 md:mt-0">
+                            <div class=" md:mx-4 md:mt-0">
                                 <h1 class="text-xl font-semibold text-gray-700 capitalize ">{{$apropo->titre}}</h1>
         
                                 <div class="mt-3 text-gray-400 text-justify">
@@ -38,45 +77,8 @@
                     
  
                 </div>
-                <style>
-                    .row {
-                    display: flex;
-                    flex-wrap: wrap;
-                    padding: 0 4px;
-                    }
-
-                    /* Create four equal columns that sits next to each other */
-                    .column {
-                    flex: 25%;
-                    max-width: 25%;
-                    padding: 0 4px;
-                    }
-
-                    .column img {
-                    margin-top: 8px;
-                    vertical-align: middle;
-                    width: 100%;
-                    }
-
-                    /* Responsive layout - makes a two column-layout instead of four columns */
-                    @media screen and (max-width: 800px) {
-                    .column {
-                        flex: 50%;
-                        max-width: 50%;
-                    }
-                    }
-
-                    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-
-                    @media screen and (max-width: 600px) {
-                    .column {
-                        flex: 100%;
-                        max-width: 100%;
-                    }
-                    }
-
-                </style>
-                <div class="hidden lg:flex lg:items-center  lg:justify-center">
+               
+                <div class="hidden lg:flex lg:items-center  lg:justify-center ">
                     <div class="row">
                         <div class="column">
                             <img data-aos="zoom-in" class=" object-cover w-full" src="{{asset('assets/about2.jpeg')}}" alt="">
