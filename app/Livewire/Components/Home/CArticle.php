@@ -13,7 +13,7 @@ class CArticle extends Component
     public $articles;
     public function render()
     {
-        $this->articles=Article::all();
+        $this->articles=Article::all()->limit(6);
         return view('livewire.components.home.c-article');
     }
 }
