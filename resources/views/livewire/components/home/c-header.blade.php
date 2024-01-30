@@ -38,7 +38,8 @@
   </section>
   <script>       
     new Splide( '#header-slide', {
-      type : 'loop',
+      type : 'fade',
+      autoplay: true,
     }).mount();
   </script>
 </div>

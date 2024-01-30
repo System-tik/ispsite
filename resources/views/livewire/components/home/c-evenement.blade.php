@@ -49,6 +49,7 @@
         new Splide( '#events', {
             type   : 'loop',
             padding: '20%',
+            autoplay: true,
         } ).mount();    
     }
 

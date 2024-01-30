@@ -11,11 +11,11 @@
         
                 <main class="relative z-20 w-full mt-8  md:flex md:items-center xl:mt-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <div class="absolute lg:w-96 bg-blue-600 -z-10 h-64 md:h-96 rounded-2xl"></div>
-                    <section class="splide"  id="why">
-                        <div class="splide__track">
-                            <ul class="splide__list">
+                    <section class="splide w-full"  id="why">
+                        <div class="splide__track w-full">
+                            <ul class="splide__list w-full">
                                 @foreach ($pourquoi as $pourquois)  
-                                <li class="splide__slide">         
+                                <li class="splide__slide w-full">         
                                     <div class="w-full p-6 bg-bleu-600 md:flex md:items-center rounded-2xl md:bg-transparent md:p-0 lg:px-12 md:justify-evenly">
                                         <img class=" md:mx-6 rounded-full object-cover shadow-md  md:w-80 lg:h-[26rem] md:h-[32rem] md:rounded-2xl" src="{{$pourquois->getMedia()[0]['original_url']}}" alt="client photo" />
                                         <div class="mt-2 md:mx-6">
@@ -23,7 +23,7 @@
                                                 <p class="mt-4 text-xl font-medium tracking-tight text-white text-bold">{{$pourquois->titre}}</p>
                                             </div>
                         
-                                            <p class="mt-4 text-white lg:text-xl text-justify"> {{$pourquois->description}}</p>
+                                            <p class="mt-4 text-white lg:text-xl text-justify  lg:w-full"> {{$pourquois->description}}</p>
                                             
                                             {{-- <div class="flex items-center justify-between mt-6 md:justify-start">
                                                 <button title="left arrow" class="p-2 text-white transition-colors duration-300 border rounded-full rtl:-scale-x-100 hover:bg-blue-400">
@@ -53,8 +53,8 @@
 </div>
 <script>
     var splide = new Splide( '#why', {
-        // type   : 'loop',
-
+        type   : 'loop',
+        autoplay: true,
     });
     splide.mount();
 </script>
