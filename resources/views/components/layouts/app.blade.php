@@ -6,9 +6,9 @@
 
         <title>{{env('APP_NAME')}}</title>
 
-        {{-- @vite('resources/css/app.css')
-        @vite('resources/js/app.js') --}}
-        <link rel="stylesheet" href="{{asset('build/assets/app-vIuBbNkK.css')}}">
+{{--         @vite('resources/css/app.css')--}}
+{{--        @vite('resources/js/app.js')--}}
+        <link rel="stylesheet" href="{{asset('build/assets/app-siMSPWcX.css')}}">
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -23,13 +23,13 @@
         <script src="{{asset('build/assets/app-ecWDpuvf.js')}}"></script>
     </head>
     <body >
-    
+
     {{ $slot }}
-    
+
     <script>
-       
+
         AOS.init();
     </script>
-    
+
     </body>
 </html>

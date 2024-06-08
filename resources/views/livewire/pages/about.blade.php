@@ -14,25 +14,50 @@
             </div>
         </div>
     </div>
-    <section class="bg-gray-100 flex flex-col gap-20 w-full h-full lg:py-12 lg:flex lg:justify-center">
-        @foreach ($apropos as $apropo)    
-            <div class="overflow-hidden py-2 bg-white lg:mx-8 lg:flex lg:items-center lg:w-full lg:shadow-md lg:rounded-xl">
-                <div class="h-full">
-                    <img class="h-full ml-5 w-96" src="{{$apropo->getMedia()[0]['original_url']}}" alt="">
+    <div class="grid lg:grid-cols-3 gap-2 lg:gap-10 lg:py-20 py-5 lg:px-72 bg-gray-900 px-5">
+        <div class="flex flex-col gap-3 bg-white px-5 lg:py-10 text-center py-2">
+            <h1 class=" font-bold text-red-600 lg:text-5xl text-2xl" >1<span>er</span></h1>
+            <p class="text-xl font-bold">Au Kongo Central</p>
+            <p class="text-justify">
+                L'Institut Supérieur Pédagogique (ISP) de Mbanza-Ngungu se distingue comme la première institution supérieure pédagogique de la province du Kongo Central en République Démocratique du Congo (RDC). Fondé avec la mission de fournir une éducation de haute qualité et de former les futurs leaders de notre société, l'ISP de Mbanza-Ngungu est un pilier de l'excellence académique dans la région.
+            </p>
+        </div>
+        <div class="flex flex-col gap-3 bg-white px-5 lg:py-10 text-center py-2">
+            <h1 class=" font-bold text-blue-600 lg:text-5xl text-2xl" >3<span>ème</span></h1>
+            <p class="text-xl font-bold">En RDC</p>
+            <p class="text-justify">
+                Sur l'ensemble du territoire de la RDC,
+                l'ISP de Mbanza-Ngungu se classe comme le troisième plus grand ISP en termes de nombre d'étudiants et de professeurs. Cette position reflète notre engagement continu à attirer et à retenir les meilleurs talents, tant parmi les étudiants que parmi les enseignants.
+            </p>
+        </div>
+        <div class="flex flex-col gap-3 bg-white px-5 lg:py-10 text-center py-2">
+            <h1 class=" font-bold text-yellow-600 lg:text-5xl text-2xl" >1<span>er</span></h1>
+            <p class="text-xl font-bold">En Mbanza-Ngungu</p>
+            <p class="text-justify">
+                L'ISP de Mbanza-Ngungu est également la première institution à Mbanza-Ngungu en termes de nombre d'étudiants inscrits. Cet afflux constant d'étudiants démontre notre attractivité et notre capacité à répondre aux besoins éducatifs d'une population étudiante croissante.
+            </p>
+        </div>
+
+    </div>
+    <section class=" flex flex-col gap-20 lg:gap-10 lg:py-20 py-2 lg:px-72 bg-gray-100 px-5">
+        @foreach ($apropos as $apropo)
+            <div class=" py-2 grid lg:grid-cols-3 border-b-2">
+                <div class="">
+                    <img class="w-full" src="{{$apropo->getMedia()[0]['original_url']}}" alt="" >
                 </div>
-        
-                <div class="max-w-xl px-6 lg:py-12 lg:max-w-5xl lg:w-1/2">
+
+                <div class="w-full lg:col-span-2 lg:px-5">
                     <h2 class="text-2xl font-semibold text-gray-800 md:text-3xl">
-                        {{$apropo->titre}} 
+                        {{$apropo->titre}}
                     </h2>
-        
+
                     <div class="mt-4 text-gray-500 text-justify ">
                         @php
-                            echo "<span>$apropo->description</span>" 
+                            echo "<span>$apropo->description</span>"
                         @endphp
                     </div>
                     <div class="inline-flex w-full mt-6 sm:w-auto">
-              
+
                     </div>
                 </div>
             </div>
