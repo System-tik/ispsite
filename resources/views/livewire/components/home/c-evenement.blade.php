@@ -9,7 +9,7 @@
         de cœur de notre communauté universitaire
         grâce à nos actualités.
     </p>
-    <section id="events" class="splide pt-10" aria-label="Splide Basic HTML Example" data-aos="zoom-in">
+    <section id="events" class="splide pt-10 lg:px-64" aria-label="Splide Basic HTML Example" data-aos="zoom-in">
         <div class="splide__track">
             <ul class="splide__list">
                 @foreach ($evenement as $evenements)
@@ -22,7 +22,7 @@
                             <p>
                                 @php
                                     echo  '<span>'. substr($evenements->description,0,99) .'...</span>'
-                                @endphp 
+                                @endphp
                             </p>
                             <a href="{{route('evenement',['id'=>$evenements->id])}}" class="text-yellow-600 font-bold">Lire plus...</a>
                         </div>
@@ -50,8 +50,8 @@
             type   : 'loop',
             padding: '20%',
             autoplay: true,
-        } ).mount();    
+        } ).mount();
     }
 
-    
+
 </script>

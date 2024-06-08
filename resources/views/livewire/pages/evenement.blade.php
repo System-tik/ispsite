@@ -14,24 +14,24 @@
             </div>
         </div>
     </div>
-    
+
     <div class="grid lg:grid-cols-3 gap-10 mx-5 lg:mx-20 pt-10">
-        @foreach ($evenement as $evenements)    
+        @foreach ($evenement as $evenements)
             <div>
                 <div class="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md">
-                    <a href="{{route('evenement',['id'=>$evenements->id])}}"><img class="w-full h-64" src="{{$evenements->getMedia()[0]['original_url']}}" alt=""> 
-                    </a>               
+                    <a href="{{route('evenement',['id'=>$evenements->id])}}"><img class="w-full h-64" src="{{$evenements->getMedia()[0]['original_url']}}" alt="">
+                    </a>
                     <div class="p-6">
                         <div>
                             <a href="{{route('evenement',['id'=>$evenements->id])}}"><span class="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">{{$evenements->lib}}</span></a>
                             <a href="{{route('evenement',['id'=>$evenements->id])}}"><p class="mt-2 text-sm text-gray-400 dark:text-gray-400">
-                                @php
-                                    echo $evenements->description
-                                @endphp
+{{--                                @php--}}
+{{--                                    echo $evenements->description--}}
+{{--                                @endphp--}}
                             </p></a>
                         </div>
-                
-                        
+
+
                     </div>
                 </div>
             </div>

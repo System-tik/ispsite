@@ -14,25 +14,24 @@
             </div>
         </div>
     </div>
-    
-    <div class="grid lg:grid-cols-3 mx-5 gap-6 lg:mx-20 mt-5">
-        @foreach ($sections as $section)  
-        <div class="lg:w-80 max-w-md h-96 bg-white border border-gray-800 rounded-lg shadow dark:bg-gray-800   dark:border-gray-700">
-            <a href="{{route('section',['id'=>$section->id])}}">
-                <img class="rounded-t-lg w-full h-56" src="{{$section->getMedia()[0]['original_url']}}" alt="" />
-            </a>
+
+    <div class="grid lg:grid-cols-3 py-10 lg:px-64 gap-10 px-5">
+        @foreach ($sections as $section)
+        <div class="">
+            <img class="rounded-t-lg w-full h-56" src="{{$section->getMedia()[0]['original_url']}}" alt="" />
             <div class="">
-                <div class="px-3 py-2">
-                    <a href="{{route('section',['id'=>$section->id])}}">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$section->lib}}</h5>
+                <div class="text-justify">
+                    <h5 class="text-2xl font-bold py-5">{{$section->lib}}</h5>
+                    <p class=" font-normal text-gray-700 mb-4">{{$section->description}}</p>
+                    <a href="{{route('section',['id'=>$section->id])}}" class="text-blue-600 text-end">
+                        <p>Voir details</p>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$section->description}}</p>
                 </div>
             </div>
         </div>
-        
+
         @endforeach
-        
+
     </div>
 
     <div class="mt-32">

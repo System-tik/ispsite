@@ -14,26 +14,26 @@
             </div>
         </div>
     </div>
-    
+
     <div class="grid lg:grid-cols-3 gap-10 lg:mx-20 mx-5 pt-10">
-        @foreach ($orientations as $orient)    
+        @foreach ($orientations as $orient)
             <div>
                 <div class="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md">
                 {{-- <a href="{{route('orientation',['id'=>$orient->id])}}">
                 </a>                --}}
-                    <img class="w-full h-64" src="{{$orient->getMedia()[0]['original_url']}}" alt=""> 
+                    <img class="w-full h-64" src="{{$orient->getMedia()[0]['original_url']}}" alt="">
                     <div class="p-6">
-                        <div>
+                        <div class="text-justify">
                             <p><span class="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">{{$orient->lib}}</span></p>
                             {{-- <a href="{{route('orientation',['id'=>$orient->id])}}"><p class="mt-2 text-sm text-gray-400 dark:text-gray-400">
                             </a> --}}
                                 @php
                                     echo $orient->description
                                 @endphp
-                            
+
                         </div>
-                
-                        
+
+
                     </div>
                     <div class="flex justify-center p-3">
 

@@ -14,26 +14,25 @@
         </div>
     </div>
 
-    <div class="grid lg:grid-cols-3 gap-6 lg:mx-20 mt-5 mx-5">
-        @foreach ($departement as $departements)      
-        <div class="lg:w-80 mh-full bg-white border border-gray-400 rounded-lg shadow   dark:border-gray-700">
-            <a href="{{route('orientation', $departements->id)}}">
-                <img class="rounded-t-lg h-64" src="{{$departements->getMedia()[0]['original_url']}}" alt="" />
-            </a>
-            <div class="p-3">
-                <a href="#">
-                    <h5 class=" text-2xl font-bold tracking-tight text-gray-500 mb-3">{{$departements->lib}}</h5>
-                </a>
-                <p class="font-normal text-white">
-                @php
-                    echo $departements->description;   
-                @endphp
+    <div class="grid lg:grid-cols-3  lg:px-64 lg:py-10 py-5 lg:gap-10 px-5">
+        @foreach ($departement as $departements)
+        <div class="">
+            <img class="rounded-t-lg " src="{{$departements->getMedia()[0]['original_url']}}" alt="" />
+            <div class="text-justify">
+                <h5 class=" text-2xl font-bold tracking-tight text-gray-500 py-5">{{$departements->lib}}</h5>
+                <p class="font-normal">
+                    @php
+                        echo $departements->description;
+                    @endphp
                 </p>
+                <a href="{{route('orientation', $departements->id)}}" class="py-2 text-blue-600">
+                    <p>Voir details</p>
+                </a>
             </div>
         </div>
-        
+
         @endforeach
-        
+
     </div>
 
     <div class="mt-32">
